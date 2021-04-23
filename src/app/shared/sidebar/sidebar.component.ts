@@ -13,9 +13,10 @@ export class SidebarComponent {
     return this.gifsService.historial;
   }
 
-  constructor( private gifsService:GifsService ) { }
-
-  ngOnInit(): void {
+  buscar(termino:string){
+    this.gifsService.buscarGifs(termino)
   }
+
+  constructor( private gifsService:GifsService ) {}
 
 }
